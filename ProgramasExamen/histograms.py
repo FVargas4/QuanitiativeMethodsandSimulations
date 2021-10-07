@@ -3,24 +3,28 @@ import pandas as pd
 import math
 import matplotlib.pyplot as plt
 
+archivo = ""
 #Obtain which file to obtain the data from
 while exit != 1:
     choice = int(input("Enter which file you want to get the data from: "))
     if choice == 1:
-        file = "data01.txt"
+        archivo = "data01.txt"
         break
     elif choice == 2:
-        file = "data02.txt"
+        archivo = "data02.txt"
         break
     elif choice == 3:
-        file = "data03.txt"
+        archivo = "data03.txt"
+        break
+    elif choice == 4:
+        archivo = "pregunta3.txt"
         break
     else:
         print('Please enter a valid option.')
         exit = 1
 
 # Obtain data from files
-text = pd.read_csv(file)
+text = pd.read_csv(archivo)
 dFile = text.to_numpy()
 decimals = 4
 

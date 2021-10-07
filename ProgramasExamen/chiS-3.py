@@ -48,13 +48,11 @@ def getSigns(a):
 
 dataaux= []
 
-with open('runs_data.txt', newline='') as inputfile:
+with open('pregunta3.txt', newline='') as inputfile:
     for row in csv.reader(inputfile):
         number=float(row[0])
-        ##se guarda en una lista
         dataaux.append(number)
 
-#sacamos los valores de dataaxu para redondearlos a 4 digitos
 data = [round(num, 4) for num in dataaux]
 
 
@@ -67,7 +65,7 @@ def getH(valor):
         return 2.575   
 
 C=10
-#sacar minimo y maximo en la lista de datos
+
 MAX=round(max(data),4)
 
 MIN=0

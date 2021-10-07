@@ -12,7 +12,7 @@ def listRange(li, min, max):
 fileData= []
 
 #Get data from text file
-with open('chi_data.txt', newline='') as inputfile:
+with open('pregunta3.txt', newline='') as inputfile:
     for row in csv.reader(inputfile):
         number = float(row[0])
         fileData.append(number)
@@ -120,7 +120,7 @@ ecuation = getX2(n,expected)
 
 print(ecuation)
 print("\n")
-x2=sum(getX2(n,expected))
+x2 = sum(getX2(n,expected))
 
 print("X^2: "+  str(x2 ) )
 print("\n")
